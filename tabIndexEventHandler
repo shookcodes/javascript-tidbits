@@ -1,0 +1,12 @@
+function tabIndexEvent() {
+  /*document.addEventListener('focus', function () {
+    console.log('focused: ', document.activeElement)
+  }, true); */
+
+  document.activeElement.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13 || event.keyCode === 32) {
+      event.preventDefault();
+      document.activeElement.click();
+    }
+  });
+}
